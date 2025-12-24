@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* Whyte font fallback - using Inter as closest alternative */
+@font-face {
+    font-family: 'Whyte';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dashboard-container {
+    background: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    padding: 24px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    background: #ffffff;
+}
+
+.sidebar {
+    width: 280px;
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    padding: 24px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.content-area {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.metric-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.chart-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.patient-selector {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.patient-dropdown {
+    z-index: 1000;
+}
+
+.Select-menu-outer {
+    z-index: 1001 !important;
+}
+
+.Select-control {
+    z-index: 1000;
+}
+
+.Select-menu {
+    z-index: 1001 !important;
+    max-height: 50px !important;
+    overflow-y: auto !important;
+    border: 1px solid #eeeeee !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.Select-option {
+    padding: 12px 16px !important;
+    color: #666666 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #eeeeee !important;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+}
+
+.Select-option:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+.Select-option.is-focused {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+.Select-control {
+    border: 1px solid #eeeeee !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #000000 !important;
+    line-height: 1.4 !important;
+}
+
+.Select-placeholder {
+    color: #666666 !important;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
+
+.Select-single-value {
+    color: #000000 !important;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
+
+/* Typography System - Space Mono */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+    color: #000000;
+    letter-spacing: -0.04em;
+}
+
+/* Large hero text - matches "A pre-seed fund built for you" */
+h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+}
+
+/* Section headings - matches "VC is broken" */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+/* Subsection headings - matches "TEAM" */
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+/* Card titles and smaller headings */
+h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+.metric-value {
+    font-family: 'Space Mono', monospace;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+.metric-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    color: #666666;
+    margin: 8px 0 0 0;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.4;
+}
+
+.nav-item {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0;
+    padding: 12px 16px;
+    margin: 4px 0;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #666666;
+    line-height: 1.4;
+}
+
+.nav-item:hover {
+    background: transparent;
+    color: #000000;
+}
+
+.nav-item.active {
+    background: transparent;
+    color: #000000;
+    font-weight: 400;
+}
+
+.code-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+/* Exact Concept Ventures typography classes */
+.section-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.body-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.4;
+}
+
+.small-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.4;
+}
+
+.caption-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    font-weight: 400;
+    color: #999999;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.4;
+}
+
+/* Paragraph text - Space Mono */
+p {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+}
+
+.status-good {
+    color: #059669;
+}
+
+.status-warning {
+    color: #d97706;
+}
+
+.status-danger {
+    color: #dc2626;
+}
+
+/* Report button styling */
+.report-button {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.report-button:hover {
+    color: #000000;
+    background: #f8f9fa;
+}
