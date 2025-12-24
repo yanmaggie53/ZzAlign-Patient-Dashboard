@@ -1,3 +1,3 @@
-# osa-dashboard-prototypes
+# ZzAlign Patient Dashboard Structure
 
-Prototypes/experimentation of the patient dashboards for the OSA project (AlignZz), creating visualizations from all data collected from clinical trials.
+This repo contains the structure of the patient dashboards for ZzAlign. Patient sleep and pump data can be uploaded here as CSV files and will be displayed as signal graphs. Patient respiratory reports can be uploaded here as CSV files and will be parsed accordingly to be displayed as numerical data. 
